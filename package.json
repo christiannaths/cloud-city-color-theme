@@ -1,7 +1,7 @@
 {
-  "name": "deep-water-color-theme",
-  "displayName": "Deep Water Colour Theme",
-  "description": "A neutral tone dark theme for VSCode",
+  "name": "cloud-city-color-theme",
+  "displayName": "Cloud City Colour Theme",
+  "description": "A neutral tone light theme for VSCode",
   "version": "0.0.1",
   "publisher": "false",
   "engines": {
@@ -11,9 +11,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Deep Water",
-        "uiTheme": "vs-dark",
-        "path": "./theme.json"
+        "label": "Cloud City",
+        "uiTheme": "vs",
+        "path": "./cloud-city-theme.json"
       }
     ]
   }
