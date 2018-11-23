@@ -1,6 +1,8 @@
 import React from 'react';
 import { PhotoStory, VideoStory } from './stories';
 
+const MY_CONSTANT = 42;
+
 const components = {
   photo: PhotoStory,
   video: VideoStory
@@ -14,8 +16,9 @@ function Story(props) {
 
 const HellWorld = (props) => {
   const foo = 'bar';
-  const bar = 'baz';
-  const baz = (13 * 2) / (2 + 4);
+  let bar = 'baz';
+  var baz = (13 * 2) / (2 + 4);
+  const { foo, bar } = props;
 
   return (
     <MyComponent attr1={foo} attr2={bar} attr3="baz">
@@ -24,6 +27,7 @@ const HellWorld = (props) => {
   );
 };
 
+// This is a comment
 class Cat extends React.Component {
   render() {
     const mouse = this.props.mouse;
@@ -48,6 +52,16 @@ class Mouse extends React.Component {
       x: event.clientX,
       y: event.clientY
     });
+  }
+
+  aMethodThatSwitches() {
+    switch (prop.key) {
+      case 'foo':
+        break;
+
+      default:
+        break;
+    }
   }
 
   render() {
@@ -77,4 +91,7 @@ class MouseTracker extends React.Component {
   }
 }
 
-console.error('hello world');
+console.error('hello world', { HelloWorld });
+
+export default MouseTracker;
+export { HelloWorld };

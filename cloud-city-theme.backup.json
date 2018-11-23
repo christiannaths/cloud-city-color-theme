@@ -1,0 +1,170 @@
+{
+  "name": "Cloud City",
+  "type": "light",
+  "author": "Christian Naths",
+  "pallete": {
+    "green": "#34c84a",
+    "red": "#FF4F6C",
+    "purple": "#896ac3",
+    "yellow": "#fdbc40",
+    "dark": "#1b354e",
+    "blue": "#1dafd9"
+  },
+  "colors": {
+    "activityBar.background": "#eceff1",
+    "activityBar.foreground": "#1b354e",
+    "activityBarBadge.foreground": "#000000",
+    "badge.background": "#00000030",
+    "dropdown.background": "#eceff1",
+    "editor.background": "#ffffff",
+    "editor.findMatchBackground": "#A9B300",
+    "editor.findMatchHighlightBackground": "#fec04125",
+    "editor.foreground": "#253349",
+    "editor.lineHighlightBackground": "#00000005",
+    "editor.selectionBackground": "#fec04150",
+    "editor.selectionHighlightBackground": "#fec04125",
+    "editorGroup.border": "#00000030",
+    "editorGroupHeader.tabsBackground": "#eceff1",
+    "editorHoverWidget.background": "#eceff1",
+    "editorLineNumber.foreground": "#CFD8DC",
+    "editorSuggestWidget.background": "#eceff1",
+    "editorSuggestWidget.selectedBackground": "#00000050",
+    "editorWidget.background": "#eceff1",
+    "list.activeSelectionBackground": "#00000050",
+    "list.inactiveSelectionBackground": "#00000050",
+    "notification.background": "#eceff1",
+    "panel.border": "#eceff1",
+    "scrollbar.shadow": "#eceff100",
+    "scrollbarSlider.background": "#00000050",
+    "scrollbarSlider.hoverBackground": "#00000030",
+    "sideBar.background": "#eceff1",
+    "sideBarSectionHeader.background": "#eceff1",
+    "statusBar.background": "#eceff1",
+    "statusBar.foreground": "#1b354e",
+    "statusBar.noFolderBackground": "#eceff1",
+    "tab.border": "#eceff1",
+    "tab.inactiveBackground": "#eceff1",
+    "titleBar.activeBackground": "#eceff1",
+    "titleBar.inactiveBackground": "#eceff1",
+    "widget.shadow": "#00000030"
+  },
+  "tokenColors": [
+    {
+      "name": "Light Netural",
+      "scope": [
+        "comment",
+        "variable.other",
+        "styled js",
+        "support.type.property-name.css",
+        "punctuation",
+        "keyword.operator",
+        "storage.type.function.arrow",
+        "source.css meta"
+      ],
+      "settings": {
+        "foreground": "#CFD8DC"
+      }
+    },
+    {
+      "name": "Neutral",
+      "scope": [
+        "meta",
+        "keyword.control.import.js",
+        "keyword.control.export.js",
+        "keyword.control.from",
+        "keyword.control.default",
+        "meta.definition.variable",
+        "meta.definition.variable variable.other",
+        "meta.tag.attributes entity.other.attribute-name",
+        "support.type.property-name.css",
+        "source.css support.function"
+      ],
+      "settings": {
+        "foreground": "#90A4AE"
+      }
+    },
+    {
+      "name": "Dark Neutral",
+      "scope": [
+        "meta.import variable.other",
+        "variable.other",
+        "meta.definition entity.name.function",
+        "meta.var.expr variable.other.object",
+        "variable.other.property.js",
+        "variable.other.object.property.js",
+        "entity.name.type.module",
+        "entity.other",
+        "variable.parameter",
+        "support.constant.property-value.css"
+      ],
+      "settings": {
+        "foreground": "#1b354e"
+      }
+    },
+
+    {
+      "name": "Green",
+      "scope": ["string"],
+      "settings": {
+        "foreground": "#31c89d"
+      }
+    },
+    {
+      "name": "Purple",
+      "scope": [
+        "keyword",
+        "storage.type",
+        "meta.var.expr",
+        "meta.selector.css entity.name.tag",
+        "entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.class"
+      ],
+      "settings": {
+        "foreground": "#896ac3"
+      }
+    },
+    {
+      "name": "Red",
+      "scope": [
+        "support.function",
+        "support.class.component",
+        "entity.name.tag",
+        "variable.other.constant.object",
+        "variable.other.constant.property",
+        "storage.type.class",
+        "variable.language.this",
+        "entity.name.type.class.ruby"
+      ],
+      "settings": {
+        "foreground": "#e3517c"
+      }
+    },
+    {
+      "name": "Blue",
+      "scope": [
+        "entity.name.function",
+        "constant.numeric",
+        "keyword.other.unit.px.css"
+      ],
+
+      "settings": {
+        "foreground": "#1dafd9"
+      }
+    },
+    {
+      "name": "Yellow",
+      "scope": ["entity.name.type.class"],
+      "settings": {
+        "foreground": "#fdbc40"
+      }
+    },
+    {
+      "name": "Warning",
+      "scope": ["support.class.console", "support.function.console"],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#fdbc40"
+      }
+    }
+  ]
+}

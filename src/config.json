@@ -1,0 +1,23 @@
+{
+  "theme": {
+    "name": "Cloud City",
+    "type": "light",
+    "author": "Christian Naths"
+  },
+  "colors": {
+    "black": "#000000",
+    "blue": "#1dafd9",
+    "green": "#31c89d",
+    "orange": "#f0652a",
+    "navy": "#2b3291",
+    "neutralDark": "#031530",
+    "neutralSilver": "#eceff1",
+    "neutralLight": "#ccd7de",
+    "neutralMedium": "#687383",
+    "purple": "#896ac3",
+    "red": "#dc3568",
+    "yellow": "#fdbc40",
+    "contrastBright": "#2afa92",
+    "white": "#ffffff"
+  }
+}
