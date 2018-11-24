@@ -9,16 +9,15 @@ const tokens = {
     'keyword.control.export',
     'keyword.control.default',
     'support.type.property-name.css',
-    'support.function.misc.css'
+    'support.function.misc.css',
+    'meta.function-call variable'
   ],
   neutralSilver: [],
   neutralLight: [
     'comment',
     'keyword.operator',
-    // 'meta.object-literal.key',
     'punctuation',
-    'meta.brace',
-    'storage.modifier'
+    'meta.brace'
   ],
   neutralDark: [
     'meta.import variable',
@@ -32,7 +31,8 @@ const tokens = {
     'source.ruby entity.other.inherited-class',
     'support.constant.property-value',
     'constant.other.color',
-    'meta.tag.attributes variable'
+    'meta.tag.attributes variable',
+    'variable.other.object'
   ],
   green: ['string'],
   purple: [
@@ -48,14 +48,18 @@ const tokens = {
     'entity.name.tag',
     'source.ruby entity.name.type.class'
   ],
-  blue: ['meta.function-call entity.name.function', 'keyword.control'],
+  blue: [
+    'meta.function-call',
+    'meta.function-call entity.name.function',
+    'keyword.control',
+    'support.function'
+  ],
   yellow: [
     'support.variable.dom',
     'support.class.console',
-    'support.function.console',
-    'storage.type.class'
+    'support.function.console'
   ],
-  navy: ['constant.numeric'],
+  navy: ['constant.numeric', 'support.constant.math'],
   orange: []
 };
 
