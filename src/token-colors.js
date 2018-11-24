@@ -7,7 +7,9 @@ const tokens = {
     'keyword.control.import',
     'keyword.control.from',
     'keyword.control.export',
-    'keyword.control.default'
+    'keyword.control.default',
+    'support.type.property-name.css',
+    'support.function.misc.css'
   ],
   neutralSilver: [],
   neutralLight: [
@@ -27,13 +29,18 @@ const tokens = {
     'entity.name.function',
     'entity.name.type.class',
     'variable.other.constant',
-    'source.ruby entity.other.inherited-class'
+    'source.ruby entity.other.inherited-class',
+    'support.constant.property-value',
+    'constant.other.color',
+    'meta.tag.attributes variable'
   ],
   green: ['string'],
   purple: [
     'storage.type',
     'meta.function',
-    'source.ruby keyword.other.special-method'
+    'source.ruby keyword.other.special-method',
+    'entity.other.attribute-name.id.css',
+    'entity.other.attribute-name.class.css'
   ],
   red: [
     'keyword.operator.expression',
@@ -48,7 +55,8 @@ const tokens = {
     'support.function.console',
     'storage.type.class'
   ],
-  navy: ['constant.numeric']
+  navy: ['constant.numeric'],
+  orange: []
 };
 
 export default mapTokensByKey(tokens, config.colors);

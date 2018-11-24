@@ -15,3 +15,8 @@ body {
   align-items: center;
   box-shadow: 0px 0px 20px rgba(2, 34, 231, 0.5);
 }
+
+h2 {
+  color: #ffaabb;
+  font-weight: bold;
+}
