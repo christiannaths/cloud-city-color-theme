@@ -24,8 +24,9 @@ This readme.
 
 ## License
 
-Do whatever you like. Just don't try to copyright it for your self and try to sue me or anything stupid like that.
+MIT. Do whatever you like. Just don't try to copyright it for your self and try to sue me or anything stupid like that.
 
 ## Inspiration
 
-https://dribbble.com/shots/5591366-Mahameru-Landing-Page
+- https://dribbble.com/shots/5591366-Mahameru-Landing-Page
+- https://dribbble.com/shots/3229795-Neutral-Colours
