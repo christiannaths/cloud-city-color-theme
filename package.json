@@ -3,10 +3,12 @@
   "displayName": "Cloud City Colour Theme",
   "description": "A neutral tone light theme for VSCode",
   "version": "0.0.1",
+  "repository": "https://github.com/christiannaths/cloud-city-color-theme",
   "scripts": {
-    "start": "nodemon -w src --exec npm run build ",
+    "start": "nodemon -w src --exec yarn build ",
     "build": "babel-node src/index.js > cloud-city-theme.json",
-    "publish": "ln -s $(pwd) $HOME/.vscode/extensions/cloud-city-color-theme"
+    "package": "vsce package --baseImagesUrl=https://github.com/christiannaths/cloud-city-color-theme/blob/master/",
+    "install:local": "ln -s $(pwd) $HOME/.vscode/extensions/cloud-city-color-theme"
   },
   "license": "MIT",
   "publisher": "false",
@@ -30,7 +32,9 @@
     "@babel/core": "^7.1.6",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
-    "nodemon": "^1.18.6"
+    "core-js": "3",
+    "nodemon": "^1.18.6",
+    "vsce": "^1.59.0"
   },
   "babel": {
     "presets": [
@@ -40,7 +44,8 @@
           "targets": {
             "node": "8"
           },
-          "useBuiltIns": "usage"
+          "useBuiltIns": "usage",
+          "corejs": 3
         }
       ]
     ]
