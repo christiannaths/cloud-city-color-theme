@@ -46,7 +46,8 @@
         "keyword.control.default",
         "support.type.property-name.css",
         "support.function.misc.css",
-        "meta.function-call variable"
+        "meta.function-call variable",
+        "constant.language.symbol.hashkey.ruby"
       ],
       "settings": { "foreground": "#90a4ae" }
     },
@@ -75,7 +76,9 @@
         "support.constant.property-value",
         "constant.other.color",
         "meta.tag.attributes variable",
-        "variable.other.object"
+        "variable.other.object",
+        "entity.name.function.ruby",
+        "source.ruby"
       ],
       "settings": { "foreground": "#031530" }
     },
@@ -91,7 +94,9 @@
         "meta.function",
         "source.ruby keyword.other.special-method",
         "entity.other.attribute-name.id.css",
-        "entity.other.attribute-name.class.css"
+        "entity.other.attribute-name.class.css",
+        "keyword.control.class.ruby",
+        "keyword.control.ruby"
       ],
       "settings": { "foreground": "#896ac3" }
     },
@@ -111,7 +116,8 @@
         "meta.function-call",
         "meta.function-call entity.name.function",
         "keyword.control",
-        "support.function"
+        "support.function",
+        "constant.language.symbol.ruby"
       ],
       "settings": { "foreground": "#1dafd9" }
     },
