@@ -30,3 +30,7 @@ MIT. Do whatever you like. Just don't try to copyright it for your self and try 
 
 - https://dribbble.com/shots/5591366-Mahameru-Landing-Page
 - https://dribbble.com/shots/3229795-Neutral-Colours
+
+## Icon Attribution
+
+[Rain icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/rain)

@@ -1,4 +1,6 @@
 {
+  "preview": true,
+  "icon": "icon5.png",
   "name": "cloud-city-color-theme",
   "displayName": "Cloud City",
   "description": "A neutral, low-contrast, light colour theme for VSCode",
