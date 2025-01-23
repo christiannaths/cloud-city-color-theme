@@ -1,7 +1,6 @@
 {
   "name": "Cloud City",
   "type": "light",
-  "author": "Christian Naths",
   "colors": {
     "activityBar.background": "#eceff1",
     "activityBar.border": "#90a4ae50",
@@ -117,7 +116,8 @@
         "meta.function-call entity.name.function",
         "keyword.control",
         "support.function",
-        "constant.language.symbol.ruby"
+        "constant.language.symbol.ruby",
+        "keyword.other.special-method.dockerfile"
       ],
       "settings": { "foreground": "#1dafd9" }
     },
