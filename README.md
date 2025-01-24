@@ -1,6 +1,6 @@
-# Cloud City Light Theme for VSCode
+<img src="https://raw.githubusercontent.com/christiannaths/cloud-city-color-theme/refs/heads/master/icon5.png" alt="Cloud City Icon" width=200>
 
-_Warning: NOT READY FOR PUBLIC USE_
+# Cloud City Light Theme for VSCode `preview`
 
 ## Why is this theme different?
 
@@ -8,23 +8,23 @@ I find most too colourful which I personally find hard to visually parse. My int
 
 ## What does it look like?
 
-![screenshot](screenshots/cloud-city-1.png)
+![css screenshot](https://raw.githubusercontent.com/christiannaths/cloud-city-color-theme/refs/heads/master/screenshots/cloud-city-1.png)
 
-![screenshot](screenshots/cloud-city-2.png)
+![html screenshot](https://raw.githubusercontent.com/christiannaths/cloud-city-color-theme/refs/heads/master/screenshots/cloud-city-2.png)
 
-![screenshot](screenshots/cloud-city-3.png)
+![react screenshot](https://raw.githubusercontent.com/christiannaths/cloud-city-color-theme/refs/heads/master/screenshots/cloud-city-3.png)
 
-![screenshot](screenshots/cloud-city-4.png)
+![js screenshot](https://raw.githubusercontent.com/christiannaths/cloud-city-color-theme/refs/heads/master/screenshots/cloud-city-4.png)
 
-![screenshot](screenshots/cloud-city-5.png)
+![ruby screenshot](https://raw.githubusercontent.com/christiannaths/cloud-city-color-theme/refs/heads/master/screenshots/cloud-city-5.png)
 
 ## What needs fixing?
 
-This readme.
+- support more languages
 
 ## License
 
-MIT. Do whatever you like. Just don't try to copyright it for your self and try to sue me or anything stupid like that.
+See `LICENSE.md`
 
 ## Inspiration
 
