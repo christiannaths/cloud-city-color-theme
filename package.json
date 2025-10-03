@@ -10,7 +10,7 @@
     "name": "Christian Naths",
     "email": "christiannaths@gmail.com"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -23,6 +23,22 @@
         "label": "Cloud City",
         "uiTheme": "vs",
         "path": "./themes/cloud-city-color-theme.json"
+      }
+    ],
+    "grammars": [
+      {
+        "path": "./syntaxes/javascript-todo-comment-injection.json",
+        "scopeName": "todo-comment.injection",
+        "injectTo": [
+          "source.js"
+        ]
+      },
+      {
+        "path": "./syntaxes/dockerfile-section-injection.json",
+        "scopeName": "dockerfile.section.injection",
+        "injectTo": [
+          "source.dockerfile"
+        ]
       }
     ]
   },

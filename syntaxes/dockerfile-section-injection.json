@@ -1,0 +1,20 @@
+{
+  "scopeName": "dockerfile.section.injection",
+  "injectionSelector": "L:source.dockerfile",
+  "patterns": [
+    {
+      "include": "#section-keyword"
+    }
+  ],
+  "repository": {
+    "section-keyword": {
+      "match": "(?i)^\\s*(FROM)\\b\\s*([^\\s]+)(?:.*\\b(AS)\\b\\s*(.+))?$",
+      "captures": {
+        "1": { "name": "entity.name.section.dockerfile" },
+        "2": { "name": "entity.name.tag.dockerfile" },
+        "3": { "name": "entity.name.section.dockerfile" },
+        "4": { "name": "entity.name.tag.dockerfile" }
+      }
+    }
+  }
+}

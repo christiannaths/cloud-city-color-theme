@@ -1,0 +1,126 @@
+services:
+  traefik:
+    image: "traefik:v3.3"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.websecure.address=:443"
+      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.email=christiannaths@gmail.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "/home/docker/letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - navrate
+
+  mysql:
+    image: mysql:8.4
+    env_file: .env
+
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_ONETIME_PASSWORD: 1
+      MYSQL_DATABASE: navrate_webapp
+      # MYSQL_USER:
+      # MYSQL_PASSWORD:
+
+    volumes:
+      - "/mnt/mysql-persistent-disk/mysql_data:/var/lib/mysql"
+      - "/home/docker/mysql/conf.d:/etc/mysql/conf.d"
+      - "mysqld:/var/run/mysqld"
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+    networks:
+      - navrate
+
+  webapp:
+    image: us-central1-docker.pkg.dev/navrate/navrate/navrate-webapp:latest
+    env_file: .env
+    environment:
+      MYSQL_SOCKET: /app/mysqld/mysqld.sock
+      MYSQL_DATABASE: navrate_webapp
+      # MYSQL_USER:
+      # MYSQL_PASSWORD:
+    labels:
+      - "traefik.http.routers.webapp.rule=Host(`staging.navrate.com`)"
+      - "traefik.enable=true"
+      - "traefik.http.routers.webapp.entrypoints=websecure"
+      - "traefik.http.routers.webapp.tls.certresolver=letsencrypt"
+      - "traefik.http.services.webapp.loadbalancer.server.port=3000"
+    volumes:
+      - "mysqld:/app/mysqld:ro"
+
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        delay: 5s
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+    networks:
+      - navrate
+
+  api:
+    image: us-central1-docker.pkg.dev/navrate/navrate/navrate-api:latest
+    env_file: .env
+    working_dir: /app
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        delay: 5s
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+    networks:
+      - navrate
+
+  mysql-client:
+    image: us-central1-docker.pkg.dev/navrate/navrate/mysql-client:latest
+    env_file: .env
+    ports:
+      - 33306:3306
+    environment:
+      MYSQL_SOCKET: /var/run/mysqld/mysqld.sock
+      MYSQL_DATABASE: navrate_webapp
+      # MYSQL_USER:
+      # MYSQL_PASSWORD:
+    command: "stop"
+    volumes:
+      - mysqld:/var/run/mysqld:ro
+    networks:
+      - navrate
+    deploy:
+      mode: replicated-job
+      replicas: 1
+      restart_policy:
+        condition: none
+
+networks:
+  navrate:
+    driver: overlay
+    attachable: true
+
+volumes:
+  mysqld:
